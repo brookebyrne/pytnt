@@ -13,8 +13,7 @@ import datetime
 from time import gmtime
 import re
 import numpy as np
-from numpy.fft import fftfreq, fftshift
-import numpy.dual as npfast
+from numpy.fft import fftfreq, fftshift, fft
 
 from . import TNTdtypes
 from .utils import convert_si, read_pascal_string
@@ -174,7 +173,7 @@ class TNTfile:
         lbweight = np.exp(LBdw * np.arange(npts, dtype=float))
         DATAlb = (DATA - DCoffset) * lbweight[:, np.newaxis, np.newaxis, np.newaxis]
 
-        DATAfft = npfast.fft(DATAlb, n=npts_ft, axis=0)
+        DATAfft = fft(DATAlb, n=npts_ft, axis=0)
         DATAfft = fftshift(DATAfft, axes=[0])
         DATAfft /= np.sqrt(npts_ft)  # To match TNMR behaviour
 
