@@ -11,7 +11,7 @@ Simple Python module for accessing .tnt NMR data files produced by TecMag's TNMR
 ## Usage
 
 ```python
->>> from pytnt import TNTfile
+>>> from pytnt_2025 import TNTfile
 
 >>> tnt = TNTfile('my-data-file.tnt')
 

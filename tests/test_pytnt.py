@@ -13,7 +13,7 @@ import numpy as np
 from numpy.testing import assert_allclose
 from numpy.testing import assert_array_almost_equal
 
-from pytnt.processTNT import TNTfile
+from pytnt_2025.processTNT import TNTfile
 
 
 class TestLoadFile(unittest.TestCase):
