@@ -4,7 +4,6 @@
 # SPDX-License-Identifier: GPL-3.0-or-later AND BSD-3-Clause
 
 import numpy as np
-
 from . import TNTdtypes
 
 
@@ -74,7 +73,7 @@ def read_pascal_string(data, number_type='<i4', encoding='ascii'):
     return text
 
 
-def save_gnuplot_matrix(tnt, mat_file, max_ppm=np.Inf, min_ppm=-np.Inf,
+def save_gnuplot_matrix(tnt, mat_file, max_ppm=np.inf, min_ppm=-np.inf,
                         altDATA=None, times=None, logfile=None):
     """Save a file suitable for use as a gnuplot 'binary matrix'
 
