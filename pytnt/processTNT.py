@@ -261,3 +261,15 @@ class TNTfile:
     def decode(self, bdata):
         """Decode a string using this file's encoding."""
         return str(bdata, encoding=self.encoding)
+    
+    def mag_field(self):
+        """Returns the magnetic field strength in Tesla"""
+        return self.magnet_field
+    
+    def freq_offset(self):
+        """Returns the frequency offset in Hz"""
+        return self.offset_freq[0]
+    
+
+    
+
